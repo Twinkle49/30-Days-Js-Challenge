@@ -12,10 +12,6 @@ This challenge is crafted to sharpen my JavaScript skills by presenting a fresh 
 I will be committing my solutions to this repository daily. Each day's solution will be organized in its respective directory, named `dayX`, where `X` represents the day number. Additionally, I'll be including the following elements to provide a comprehensive overview of my progress:
 
 1. **Code Snippets and Explanations**: Each day's directory will contain key code snippets and explanations of the solutions.
-2. **Challenges Faced**: I'll document any challenges I encounter and how I address them.
-3. **Learnings**: A summary of the key takeaways and new concepts learned each day.
-4. **Future Goals**: Goals and areas of focus for the upcoming days.
-5. **Interactive Demos**: Links to live demos or interactive examples where applicable.
-6. **Resources and References**: Helpful resources, tutorials, and documentation that assisted me in solving the challenges. 
+2. **Learnings**: A summary of the key takeaways and new concepts learned each day.
 
 By including these elements, I aim to provide a thorough and insightful record of my journey through the Chai and Code's 30 Days of JavaScript Challenge.
