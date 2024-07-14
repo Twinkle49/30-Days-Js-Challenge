@@ -104,3 +104,11 @@ console.log(`The number ${num} is ${result}.`); // o/p: The number -5 is Negativ
 // Learnings:
 // The ternary operator is a shorthand for an if-else statement. It checks a condition and returns one of two values based on the condition.
 // Syntax: condition ? value_if_true : value_if_false
+
+
+// 🎉 Day 2 Complete! 🚀
+
+// Today, I tackled JavaScript operators, mastering arithmetic, assignment, comparison, logical, and ternary operators. 
+// I wrote scripts to perform various operations and understood the differences and use cases of each operator type.
+
+// Excited for Day 3 challenges ahead! 💪 
