@@ -1,0 +1,121 @@
+// Day 10: Event Handling
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling </title>
+    <style>
+        #image {
+            display: block;
+            width: 200px;
+        }
+        #colorBox {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task 1 -->
+    <button id="changeTextButton">Change Text</button>
+    <p id="textParagraph">This is the original text.</p>
+
+    <!-- Task 2 -->
+    <img id="image" src="https://via.placeholder.com/200" alt="Placeholder Image">
+
+    <!-- Task 3 and 4 -->
+    <div id="colorBox">Hover over me!</div>
+
+    <!-- Task 5 and 6 -->
+    <input type="text" id="inputField" placeholder="Type something...">
+    <p id="inputValue"></p>
+
+    <!-- Task 7 -->
+    <form id="form">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="email" placeholder="Email">
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Task 8 -->
+    <select id="dropdown">
+        <option value="">Select an option</option>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <p id="selectedValue"></p>
+
+    <!-- Task 9 and 10 -->
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="addItem">Add Item</button>
+
+    <script>
+        // Task 1
+        document.getElementById('changeTextButton').addEventListener('click', () => {
+            document.getElementById('textParagraph').textContent = 'The text has been changed!';
+        });
+
+        // Task 2
+        document.getElementById('image').addEventListener('dblclick', () => {
+            const image = document.getElementById('image');
+            image.style.display = image.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Task 3
+        document.getElementById('colorBox').addEventListener('mouseover', () => {
+            document.getElementById('colorBox').style.backgroundColor = 'lightgreen';
+        });
+
+        // Task 4
+        document.getElementById('colorBox').addEventListener('mouseout', () => {
+            document.getElementById('colorBox').style.backgroundColor = 'lightblue';
+        });
+
+        // Task 5
+        document.getElementById('inputField').addEventListener('keydown', (event) => {
+            console.log(`Key pressed: ${event.key}`);
+        });
+
+        // Task 6
+        document.getElementById('inputField').addEventListener('keyup', () => {
+            document.getElementById('inputValue').textContent = document.getElementById('inputField').value;
+        });
+
+        // Task 7
+        document.getElementById('form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            console.log('Form Data:', Object.fromEntries(formData.entries()));
+        });
+
+        // Task 8
+        document.getElementById('dropdown').addEventListener('change', (event) => {
+            document.getElementById('selectedValue').textContent = `Selected: ${event.target.value}`;
+        });
+
+        // Task 9
+        document.getElementById('list').addEventListener('click', (event) => {
+            if (event.target.tagName === 'LI') {
+                console.log(`Clicked item: ${event.target.textContent}`);
+            }
+        });
+
+        // Task 10
+        document.getElementById('addItem').addEventListener('click', () => {
+            const newItem = document.createElement('li');
+            newItem.textContent = `Item ${document.getElementById('list').children.length + 1}`;
+            document.getElementById('list').appendChild(newItem);
+        });
+    </script>
+</body>
+</html>
+// 🎉 Day 10: Event Handling Completed 🚀
+// Day 10 focused on event handling, including basic event handling, MouseEvent, Keyboard Event, Form Event, and Event Delegation. Tasks included adding click and double-click event listeners, handling mouseover and mouseout events, logging key events, preventing form submission, displaying selected dropdown values, and using event delegation to handle dynamically added elements.
